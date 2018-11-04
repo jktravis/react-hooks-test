@@ -11,6 +11,7 @@ import HookReducer from './HookReducer';
 import HookState from './HookState';
 import ClassState from './ClassState';
 import ClassLifecycle from './ClassLifecycle';
+import ClassReducer from './ClassReducer';
 import * as serviceWorker from './serviceWorker';
 
 const AppContext = createContext({ value: null, handleChange: Function.prototype });
@@ -29,6 +30,7 @@ function App() {
     "/hook/context": <HookContext/>,
     "/hook/lifecycle": <HookLifecycle/>,
     "/class/lifecycle": <ClassLifecycle/>,
+    "/class/reducer": <ClassReducer/>,
     "/hook/reducer": <HookReducer/>,
   };
 
