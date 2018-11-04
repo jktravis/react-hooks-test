@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './AppEffect';
+import App from './AppContext';
+// import App from './AppEffect';
 // import App from './AppReducer';
 // import App from './AppFun';
 // import App from './App';
