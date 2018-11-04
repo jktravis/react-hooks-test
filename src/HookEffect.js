@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-function AppEffect() {
+function HookEffect() {
   const [count, setCount] = useState(42);
 
   // cDM, cDU, cWU
@@ -26,7 +26,7 @@ function AppEffect() {
   );
 }
 
-export default AppEffect;
+export default HookEffect;
 
 
 

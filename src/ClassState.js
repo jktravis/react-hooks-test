@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
+class ClassState extends Component {
   state = {
     firstName: '',
     lastName: '',
@@ -38,4 +38,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ClassState;

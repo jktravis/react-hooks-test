@@ -4,11 +4,11 @@ import Select from 'react-select';
 
 import routes from './routes';
 import './index.css';
-import AppHookContext from './AppContext';
-import AppHookEffect from './AppEffect';
-import AppHookReducer from './AppReducer';
-import AppHookState from './AppFun';
-import AppClassState from './App';
+import HookContext from './HookContext';
+import HookEffect from './HookEffect';
+import HookReducer from './HookReducer';
+import HookState from './HookState';
+import ClassState from './ClassState';
 import * as serviceWorker from './serviceWorker';
 
 const AppContext = createContext({ value: null, handleChange: Function.prototype });
@@ -21,11 +21,11 @@ function App() {
   };
 
   const componentMap = {
-    "/class/state": <AppClassState/>,
-    "/hook/state": <AppHookState/>,
-    "/hook/reducer": <AppHookReducer/>,
-    "/hook/context": <AppHookContext/>,
-    "/hook/effect": <AppHookEffect/>,
+    "/class/state": <ClassState/>,
+    "/hook/state": <HookState/>,
+    "/hook/reducer": <HookReducer/>,
+    "/hook/context": <HookContext/>,
+    "/hook/effect": <HookEffect/>,
   };
 
   return (

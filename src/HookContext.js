@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import CounterContext from './CounterContext';
 import "./App.css";
 
-function AppContext() {
+function HookContext() {
   const [counter, setCounter] = useState(0);
   return (
     <div className="App">
@@ -31,4 +31,4 @@ function CounterDisplay() {
   );
 }
 
-export default AppContext;
+export default HookContext;

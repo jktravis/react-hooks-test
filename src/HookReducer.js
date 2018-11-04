@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import "./App.css";
 
-function AppReducer() {
+function HookReducer() {
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case 'update/firstName':
@@ -57,7 +57,7 @@ function AppReducer() {
   );
 }
 
-export default AppReducer;
+export default HookReducer;
 
 
 

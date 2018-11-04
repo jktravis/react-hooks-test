@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-function AppFun() {
+function HookState() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
@@ -43,4 +43,4 @@ function AppFun() {
   );
 }
 
-export default AppFun;
+export default HookState;
