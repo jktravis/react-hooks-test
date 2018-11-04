@@ -17,7 +17,7 @@ function HookLifecycle() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hook / Context</p>
+        <p>Hook / cDM, cWU, cDU</p>
         <div className="counter">
           {count}
         </div>
