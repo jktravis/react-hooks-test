@@ -4,54 +4,32 @@ import "./App.css";
 function HookReducer() {
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
-      case 'update/firstName':
+      case 'increment':
         return {
-          ...state,
-          firstName: action.payload,
+          counter: state.counter + 1,
         };
 
-      case 'update/lastName':
+      case 'decrement':
         return {
-          ...state,
-          lastName: action.payload,
+          counter: state.counter - 1,
         };
 
       default:
         return state;
     }
-  }, { firstName: '', lastName: '' });
-
-  const handleChange = (event) => {
-    dispatch({
-      type: event.target.name,
-      payload: event.target.value,
-    });
-  };
+  }, { counter: 0 });
 
   return (
     <div className="App">
       <header className="App-header">
         <p>Hook / Reducer</p>
-        <form>
-          <div className="first-name">
-            <label htmlFor="first-name">First Name</label>
-            <input
-              name="update/firstName"
-              id="first-name"
-              value={state.firstName}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="last-name">
-            <label htmlFor="last-name">Last Name</label>
-            <input
-              name="update/lastName"
-              id="last-name"
-              value={state.lastName}
-              onChange={handleChange}
-            />
-          </div>
-        </form>
+        <div className="counter">
+          {state.counter}
+        </div>
+        <div className="buttons">
+          <button onClick={() => dispatch({ type: 'increment' })}>inc ☝</button>
+          <button onClick={() => dispatch({ type: 'decrement' })}>dec 👇</button>
+        </div>
       </header>
     </div>
   );
@@ -60,44 +38,23 @@ function HookReducer() {
 export default HookReducer;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function useFirstLastNameReducer() {
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
-      case 'update/firstName':
+      case 'increment':
         return {
-          ...state,
-          firstName: action.payload,
+          counter: state.counter + 1,
         };
 
-      case 'update/lastName':
+      case 'decrement':
         return {
-          ...state,
-          lastName: action.payload,
+          counter: state.counter - 1,
         };
 
       default:
         return state;
     }
-  }, { firstName: '', lastName: '' });
+  }, { counter: 0 });
 
   return [state, dispatch];
 }
