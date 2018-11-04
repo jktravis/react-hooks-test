@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function AppEffect() {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(42);
 
   // cDM, cDU, cWU
   useEffect(() => {
@@ -17,6 +17,7 @@ function AppEffect() {
   return (
     <div className="App">
       <header className="App-header">
+        <p>Hook / Context</p>
         <div className="counter">
           {count}
         </div>

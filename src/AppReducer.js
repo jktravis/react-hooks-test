@@ -31,6 +31,7 @@ function AppReducer() {
   return (
     <div className="App">
       <header className="App-header">
+        <p>Hook / Reducer</p>
         <form>
           <div className="first-name">
             <label htmlFor="first-name">First Name</label>

@@ -8,6 +8,7 @@ function AppContext() {
     <div className="App">
       <CounterContext.Provider value={{ counter, setCounter }}>
         <header className="App-header">
+          <p>Hook / Context</p>
           <CounterDisplay/>
         </header>
       </CounterContext.Provider>
