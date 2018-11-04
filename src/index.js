@@ -6,10 +6,11 @@ import routes from './routes';
 import './index.css';
 import HookContext from './HookContext';
 import ClassContext from './ClassContext';
-import HookEffect from './HookEffect';
+import HookLifecycle from './HookLifecycle';
 import HookReducer from './HookReducer';
 import HookState from './HookState';
 import ClassState from './ClassState';
+import ClassLifecycle from './ClassLifecycle';
 import * as serviceWorker from './serviceWorker';
 
 const AppContext = createContext({ value: null, handleChange: Function.prototype });
@@ -26,7 +27,8 @@ function App() {
     "/hook/state": <HookState/>,
     "/class/context": <ClassContext/>,
     "/hook/context": <HookContext/>,
-    "/hook/effect": <HookEffect/>,
+    "/hook/lifecycle": <HookLifecycle/>,
+    "/class/lifecycle": <ClassLifecycle/>,
     "/hook/reducer": <HookReducer/>,
   };
 
@@ -58,7 +60,7 @@ function DefaultView() {
         </div>
       </header>
     </div>
-  )
+  );
 }
 
 function Nav() {
