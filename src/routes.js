@@ -1,9 +1,10 @@
 const routes = [
-  { to: '/class/state', label: 'Class / State'},
-  { to: '/hook/state', label: 'Hook / State'},
-  { to: '/hook/reducer', label: 'Hook / Reducer'},
-  { to: '/hook/context', label: 'Hook / Context'},
-  { to: '/hook/effect', label: 'Hook / Effect'},
+  { value: '/class/state', label: 'Class / State'},
+  { value: '/hook/state', label: 'Hook / State'},
+  { value: '/hook/reducer', label: 'Hook / Reducer'},
+  { value: '/class/context', label: 'Class / Context'},
+  { value: '/hook/context', label: 'Hook / Context'},
+  { value: '/hook/effect', label: 'Hook / Effect'},
 ];
 
 export default routes;
