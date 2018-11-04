@@ -5,6 +5,7 @@ import Select from 'react-select';
 import routes from './routes';
 import './index.css';
 import HookContext from './HookContext';
+import ClassContext from './ClassContext';
 import HookEffect from './HookEffect';
 import HookReducer from './HookReducer';
 import HookState from './HookState';
@@ -23,9 +24,10 @@ function App() {
   const componentMap = {
     "/class/state": <ClassState/>,
     "/hook/state": <HookState/>,
-    "/hook/reducer": <HookReducer/>,
+    "/class/context": <ClassContext/>,
     "/hook/context": <HookContext/>,
     "/hook/effect": <HookEffect/>,
+    "/hook/reducer": <HookReducer/>,
   };
 
   return (
