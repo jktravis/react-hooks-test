@@ -2,36 +2,30 @@ import React, { Component } from 'react';
 import './App.css';
 
 class ClassState extends Component {
-  state = {
-    firstName: '',
-    lastName: '',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0,
+    };
+  }
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+  setCounter = (counter) => {
+    this.setState({ counter });
   };
 
   render() {
+    const { counter } = this.state;
     return (
       <div className="App">
         <header className="App-header">
           <p>Class / State</p>
-          <form>
-            <div className="first-name">
-              <label htmlFor="first-name">First Name</label>
-              <input name="firstName" id="first-name" value={this.state.firstName}
-                     onChange={this.handleChange}
-              />
-            </div>
-            <div className="last-name">
-              <label htmlFor="last-name">Last Name</label>
-              <input name="lastName" id="last-name" value={this.state.lastName}
-                     onChange={this.handleChange}
-              />
-            </div>
-          </form>
+          <div className="counter">
+            {counter}
+          </div>
+          <div className="buttons">
+            <button onClick={() => this.setCounter(counter + 1)}>inc ☝</button>
+            <button onClick={() => this.setCounter(counter - 1)}>dec 👇</button>
+          </div>
         </header>
       </div>
     );
