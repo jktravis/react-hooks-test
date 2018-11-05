@@ -8,9 +8,11 @@ class ClassState extends Component {
     this.state = {
       counter: 0,
     };
+
+    this.setCounter = this.setCounter.bind(this);
   }
 
-  setCounter = (counter) => {
+  setCounter(counter) {
     this.setState({ counter });
   };
 

@@ -5,22 +5,24 @@ class ClassLifecycle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 10,
+      counter: 10,
     };
+
+    this.setCounter = this.setCounter.bind(this);
   }
 
-  setCount = () => {
-    this.setState(({ count }) => ({ count: count - 1 }));
+  setCounter() {
+    this.setState(({ counter }) => ({ counter: counter - 1 }));
   };
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      this.setCount();
+      this.setCounter();
     }, 1000);
   }
 
-  componentDidUpdate(prevProps, { count }) {
-    if (count < 2) {
+  componentDidUpdate(prevProps, { counter }) {
+    if (counter < 2) {
       clearInterval(this.interval);
     }
   }
@@ -30,13 +32,13 @@ class ClassLifecycle extends Component {
   }
 
   render() {
-    const { count } = this.state;
+    const { counter } = this.state;
     return (
       <div className="App">
         <header className="App-header">
           <p>Class / cDM, cWU, cDU</p>
           <div className="counter">
-            {count}
+            {counter}
           </div>
         </header>
       </div>

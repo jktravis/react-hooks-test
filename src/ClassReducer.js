@@ -8,9 +8,10 @@ class ClassReducer extends Component {
     this.state = {
       counter: 0,
     };
+    this.dispatch = this.dispatch.bind(this);
   }
 
-  dispatch = (action) => {
+  dispatch(action) {
     this.setState((state) => {
       switch (action.type) {
         case 'increment':

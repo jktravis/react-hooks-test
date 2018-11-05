@@ -9,13 +9,15 @@ class ClassContext extends Component {
     this.state = {
       counter: 0,
     };
+    this.setCounter = this.setCounter.bind(this);
+    this.getContextValue = this.getContextValue.bind(this);
   }
 
-  setCounter = (counter) => {
+  setCounter(counter) {
     this.setState({ counter });
   };
 
-  getContextValue = () => {
+  getContextValue() {
     return {
       ...this.state,
       setCounter: this.setCounter,
