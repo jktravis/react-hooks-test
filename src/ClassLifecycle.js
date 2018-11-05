@@ -16,13 +16,11 @@ class ClassLifecycle extends Component {
   };
 
   componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setCounter();
-    }, 1000);
+    this.interval = setInterval(this.setCounter, 1000);
   }
 
   componentDidUpdate(prevProps, { counter }) {
-    if (counter < 2) {
+    if (counter <= 1) {
       clearInterval(this.interval);
     }
   }

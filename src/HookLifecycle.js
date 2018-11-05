@@ -13,7 +13,7 @@ function HookLifecycle() {
       }, 1000);
       return () => clearInterval(interval);
     }
-  });
+  }, [count]);
 
   return (
     <div className="App">
