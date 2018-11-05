@@ -38,7 +38,20 @@ function HookReducer() {
 export default HookReducer;
 
 
-function useFirstLastNameReducer() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+function useCounterReducer() {
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case 'increment':
