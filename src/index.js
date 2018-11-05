@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { createContext, useState, useContext } from 'react';
 import ReactDOM from 'react-dom';
 import Select from 'react-select';

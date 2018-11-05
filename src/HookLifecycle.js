@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
@@ -42,6 +43,7 @@ export default HookLifecycle;
 
 
 
+/* eslint-disable no-unused-vars */
 function useCounter(initialValue) {
   const [count, setCount] = useState(initialValue);
 

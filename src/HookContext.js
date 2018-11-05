@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useContext, useState } from "react";
 import CounterContext from './CounterContext';
 import "./App.css";

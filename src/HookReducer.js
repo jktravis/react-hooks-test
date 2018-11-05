@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useReducer } from "react";
 import "./App.css";
 
@@ -51,6 +52,7 @@ export default HookReducer;
 
 
 
+/* eslint-disable no-unused-vars */
 function useCounterReducer() {
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
